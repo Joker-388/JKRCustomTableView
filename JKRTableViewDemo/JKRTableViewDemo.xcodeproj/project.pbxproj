@@ -1,0 +1,542 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F3F634E11E960EBC0023D395 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F634E01E960EBC0023D395 /* main.m */; };
+		F3F634E41E960EBC0023D395 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F634E31E960EBC0023D395 /* AppDelegate.m */; };
+		F3F634EC1E960EBC0023D395 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F3F634EB1E960EBC0023D395 /* Assets.xcassets */; };
+		F3F634EF1E960EBC0023D395 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3F634ED1E960EBC0023D395 /* LaunchScreen.storyboard */; };
+		F3F634FA1E960EBC0023D395 /* JKRTableViewDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F634F91E960EBC0023D395 /* JKRTableViewDemoTests.m */; };
+		F3F635051E960EBC0023D395 /* JKRTableViewDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F635041E960EBC0023D395 /* JKRTableViewDemoUITests.m */; };
+		F3F635141E960EDD0023D395 /* AppDelegate+JKRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F635131E960EDD0023D395 /* AppDelegate+JKRRootViewController.m */; };
+		F3F635171E960F050023D395 /* JKRRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F635161E960F050023D395 /* JKRRootViewController.m */; };
+		F3F6351D1E961A020023D395 /* JKRTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F6351C1E961A020023D395 /* JKRTableView.m */; };
+		F3F635201E961DE10023D395 /* JKRTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F6351F1E961DE10023D395 /* JKRTableViewCell.m */; };
+		F3F635231E9621850023D395 /* JKRRowInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = F3F635221E9621850023D395 /* JKRRowInfoModel.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F3F634F61E960EBC0023D395 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3F634D41E960EBC0023D395 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3F634DB1E960EBC0023D395;
+			remoteInfo = JKRTableViewDemo;
+		};
+		F3F635011E960EBC0023D395 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F3F634D41E960EBC0023D395 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F3F634DB1E960EBC0023D395;
+			remoteInfo = JKRTableViewDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F3F634DC1E960EBC0023D395 /* JKRTableViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JKRTableViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F634E01E960EBC0023D395 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F3F634E21E960EBC0023D395 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		F3F634E31E960EBC0023D395 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		F3F634EB1E960EBC0023D395 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F3F634EE1E960EBC0023D395 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F3F634F01E960EBC0023D395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3F634F51E960EBC0023D395 /* JKRTableViewDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKRTableViewDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F634F91E960EBC0023D395 /* JKRTableViewDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKRTableViewDemoTests.m; sourceTree = "<group>"; };
+		F3F634FB1E960EBC0023D395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3F635001E960EBC0023D395 /* JKRTableViewDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JKRTableViewDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3F635041E960EBC0023D395 /* JKRTableViewDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JKRTableViewDemoUITests.m; sourceTree = "<group>"; };
+		F3F635061E960EBC0023D395 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3F635121E960EDD0023D395 /* AppDelegate+JKRRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AppDelegate+JKRRootViewController.h"; sourceTree = "<group>"; };
+		F3F635131E960EDD0023D395 /* AppDelegate+JKRRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AppDelegate+JKRRootViewController.m"; sourceTree = "<group>"; };
+		F3F635151E960F050023D395 /* JKRRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRRootViewController.h; sourceTree = "<group>"; };
+		F3F635161E960F050023D395 /* JKRRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRRootViewController.m; sourceTree = "<group>"; };
+		F3F6351B1E961A020023D395 /* JKRTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRTableView.h; sourceTree = "<group>"; };
+		F3F6351C1E961A020023D395 /* JKRTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRTableView.m; sourceTree = "<group>"; };
+		F3F6351E1E961DE10023D395 /* JKRTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRTableViewCell.h; sourceTree = "<group>"; };
+		F3F6351F1E961DE10023D395 /* JKRTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRTableViewCell.m; sourceTree = "<group>"; };
+		F3F635211E9621850023D395 /* JKRRowInfoModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JKRRowInfoModel.h; sourceTree = "<group>"; };
+		F3F635221E9621850023D395 /* JKRRowInfoModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JKRRowInfoModel.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F3F634D91E960EBC0023D395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3F634F21E960EBC0023D395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3F634FD1E960EBC0023D395 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F3F634D31E960EBC0023D395 = {
+			isa = PBXGroup;
+			children = (
+				F3F634DE1E960EBC0023D395 /* JKRTableViewDemo */,
+				F3F634F81E960EBC0023D395 /* JKRTableViewDemoTests */,
+				F3F635031E960EBC0023D395 /* JKRTableViewDemoUITests */,
+				F3F634DD1E960EBC0023D395 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F3F634DD1E960EBC0023D395 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F3F634DC1E960EBC0023D395 /* JKRTableViewDemo.app */,
+				F3F634F51E960EBC0023D395 /* JKRTableViewDemoTests.xctest */,
+				F3F635001E960EBC0023D395 /* JKRTableViewDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F3F634DE1E960EBC0023D395 /* JKRTableViewDemo */ = {
+			isa = PBXGroup;
+			children = (
+				F3F634E21E960EBC0023D395 /* AppDelegate.h */,
+				F3F634E31E960EBC0023D395 /* AppDelegate.m */,
+				F3F635121E960EDD0023D395 /* AppDelegate+JKRRootViewController.h */,
+				F3F635131E960EDD0023D395 /* AppDelegate+JKRRootViewController.m */,
+				F3F635151E960F050023D395 /* JKRRootViewController.h */,
+				F3F635161E960F050023D395 /* JKRRootViewController.m */,
+				F3F6351B1E961A020023D395 /* JKRTableView.h */,
+				F3F6351C1E961A020023D395 /* JKRTableView.m */,
+				F3F635211E9621850023D395 /* JKRRowInfoModel.h */,
+				F3F635221E9621850023D395 /* JKRRowInfoModel.m */,
+				F3F6351E1E961DE10023D395 /* JKRTableViewCell.h */,
+				F3F6351F1E961DE10023D395 /* JKRTableViewCell.m */,
+				F3F634EB1E960EBC0023D395 /* Assets.xcassets */,
+				F3F634ED1E960EBC0023D395 /* LaunchScreen.storyboard */,
+				F3F634F01E960EBC0023D395 /* Info.plist */,
+				F3F634DF1E960EBC0023D395 /* Supporting Files */,
+			);
+			path = JKRTableViewDemo;
+			sourceTree = "<group>";
+		};
+		F3F634DF1E960EBC0023D395 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F3F634E01E960EBC0023D395 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F3F634F81E960EBC0023D395 /* JKRTableViewDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				F3F634F91E960EBC0023D395 /* JKRTableViewDemoTests.m */,
+				F3F634FB1E960EBC0023D395 /* Info.plist */,
+			);
+			path = JKRTableViewDemoTests;
+			sourceTree = "<group>";
+		};
+		F3F635031E960EBC0023D395 /* JKRTableViewDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F3F635041E960EBC0023D395 /* JKRTableViewDemoUITests.m */,
+				F3F635061E960EBC0023D395 /* Info.plist */,
+			);
+			path = JKRTableViewDemoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F3F634DB1E960EBC0023D395 /* JKRTableViewDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3F635091E960EBC0023D395 /* Build configuration list for PBXNativeTarget "JKRTableViewDemo" */;
+			buildPhases = (
+				F3F634D81E960EBC0023D395 /* Sources */,
+				F3F634D91E960EBC0023D395 /* Frameworks */,
+				F3F634DA1E960EBC0023D395 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JKRTableViewDemo;
+			productName = JKRTableViewDemo;
+			productReference = F3F634DC1E960EBC0023D395 /* JKRTableViewDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F3F634F41E960EBC0023D395 /* JKRTableViewDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3F6350C1E960EBC0023D395 /* Build configuration list for PBXNativeTarget "JKRTableViewDemoTests" */;
+			buildPhases = (
+				F3F634F11E960EBC0023D395 /* Sources */,
+				F3F634F21E960EBC0023D395 /* Frameworks */,
+				F3F634F31E960EBC0023D395 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3F634F71E960EBC0023D395 /* PBXTargetDependency */,
+			);
+			name = JKRTableViewDemoTests;
+			productName = JKRTableViewDemoTests;
+			productReference = F3F634F51E960EBC0023D395 /* JKRTableViewDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F3F634FF1E960EBC0023D395 /* JKRTableViewDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F3F6350F1E960EBC0023D395 /* Build configuration list for PBXNativeTarget "JKRTableViewDemoUITests" */;
+			buildPhases = (
+				F3F634FC1E960EBC0023D395 /* Sources */,
+				F3F634FD1E960EBC0023D395 /* Frameworks */,
+				F3F634FE1E960EBC0023D395 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F3F635021E960EBC0023D395 /* PBXTargetDependency */,
+			);
+			name = JKRTableViewDemoUITests;
+			productName = JKRTableViewDemoUITests;
+			productReference = F3F635001E960EBC0023D395 /* JKRTableViewDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F3F634D41E960EBC0023D395 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Joker;
+				TargetAttributes = {
+					F3F634DB1E960EBC0023D395 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+					};
+					F3F634F41E960EBC0023D395 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F3F634DB1E960EBC0023D395;
+					};
+					F3F634FF1E960EBC0023D395 = {
+						CreatedOnToolsVersion = 8.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F3F634DB1E960EBC0023D395;
+					};
+				};
+			};
+			buildConfigurationList = F3F634D71E960EBC0023D395 /* Build configuration list for PBXProject "JKRTableViewDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F3F634D31E960EBC0023D395;
+			productRefGroup = F3F634DD1E960EBC0023D395 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F3F634DB1E960EBC0023D395 /* JKRTableViewDemo */,
+				F3F634F41E960EBC0023D395 /* JKRTableViewDemoTests */,
+				F3F634FF1E960EBC0023D395 /* JKRTableViewDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F3F634DA1E960EBC0023D395 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3F634EF1E960EBC0023D395 /* LaunchScreen.storyboard in Resources */,
+				F3F634EC1E960EBC0023D395 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3F634F31E960EBC0023D395 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3F634FE1E960EBC0023D395 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F3F634D81E960EBC0023D395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3F635231E9621850023D395 /* JKRRowInfoModel.m in Sources */,
+				F3F6351D1E961A020023D395 /* JKRTableView.m in Sources */,
+				F3F635171E960F050023D395 /* JKRRootViewController.m in Sources */,
+				F3F634E41E960EBC0023D395 /* AppDelegate.m in Sources */,
+				F3F634E11E960EBC0023D395 /* main.m in Sources */,
+				F3F635141E960EDD0023D395 /* AppDelegate+JKRRootViewController.m in Sources */,
+				F3F635201E961DE10023D395 /* JKRTableViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3F634F11E960EBC0023D395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3F634FA1E960EBC0023D395 /* JKRTableViewDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F3F634FC1E960EBC0023D395 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F3F635051E960EBC0023D395 /* JKRTableViewDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F3F634F71E960EBC0023D395 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3F634DB1E960EBC0023D395 /* JKRTableViewDemo */;
+			targetProxy = F3F634F61E960EBC0023D395 /* PBXContainerItemProxy */;
+		};
+		F3F635021E960EBC0023D395 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F3F634DB1E960EBC0023D395 /* JKRTableViewDemo */;
+			targetProxy = F3F635011E960EBC0023D395 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F3F634ED1E960EBC0023D395 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3F634EE1E960EBC0023D395 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F3F635071E960EBC0023D395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F3F635081E960EBC0023D395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F3F6350A1E960EBC0023D395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JKRTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.JKRTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F3F6350B1E960EBC0023D395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = JKRTableViewDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.JKRTableViewDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F3F6350D1E960EBC0023D395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JKRTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.JKRTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKRTableViewDemo.app/JKRTableViewDemo";
+			};
+			name = Debug;
+		};
+		F3F6350E1E960EBC0023D395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = JKRTableViewDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.JKRTableViewDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/JKRTableViewDemo.app/JKRTableViewDemo";
+			};
+			name = Release;
+		};
+		F3F635101E960EBC0023D395 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JKRTableViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.JKRTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JKRTableViewDemo;
+			};
+			name = Debug;
+		};
+		F3F635111E960EBC0023D395 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = JKRTableViewDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Joker.JKRTableViewDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = JKRTableViewDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F3F634D71E960EBC0023D395 /* Build configuration list for PBXProject "JKRTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3F635071E960EBC0023D395 /* Debug */,
+				F3F635081E960EBC0023D395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F3F635091E960EBC0023D395 /* Build configuration list for PBXNativeTarget "JKRTableViewDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3F6350A1E960EBC0023D395 /* Debug */,
+				F3F6350B1E960EBC0023D395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3F6350C1E960EBC0023D395 /* Build configuration list for PBXNativeTarget "JKRTableViewDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3F6350D1E960EBC0023D395 /* Debug */,
+				F3F6350E1E960EBC0023D395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		F3F6350F1E960EBC0023D395 /* Build configuration list for PBXNativeTarget "JKRTableViewDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F3F635101E960EBC0023D395 /* Debug */,
+				F3F635111E960EBC0023D395 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F3F634D41E960EBC0023D395 /* Project object */;
+}
