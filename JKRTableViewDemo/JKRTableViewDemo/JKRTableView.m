@@ -12,9 +12,9 @@
 
 @interface JKRTableView ()
 
-@property (nonatomic, strong) NSMutableArray<__kindof UITableViewCell *> *reuseCellPool;
-@property (nonatomic, strong) NSMutableArray<JKRRowInfoModel *> *rowInfoArray;
-@property (nonatomic, strong) NSMutableDictionary *visibleCellPool;
+@property (nonatomic, strong) NSMutableArray<__kindof UITableViewCell *> *reuseCellPool; // cell缓存池,待重用
+@property (nonatomic, strong) NSMutableArray<JKRRowInfoModel *> *rowInfoArray;           // cell位置池
+@property (nonatomic, strong) NSMutableDictionary *visibleCellPool;                      // 正在展示的cell
 
 @end
 
@@ -23,11 +23,13 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     CGFloat startY = (self.contentOffset.y < 0) ? 0 : self.contentOffset.y; // 当前tableView顶部的坐标
-    CGFloat endY = (startY + self.frame.size.height) > self.contentSize.height ? self.contentSize.height : startY + self.frame.size.height; // 当前tableView底部的坐标。
     // 如果当前滚动的Y+tableView的高度大于tableView的contentSize的高度，证明滚动到了最底部，endY等于contentSize的高度
     // 如果当前滚动的Y+tableView的高度小于tableView的contentSize的高度，还么有滚动到最底部，endY等于startY的tableView的高度
+    CGFloat endY = (startY + self.frame.size.height) > self.contentSize.height ? self.contentSize.height : startY + self.frame.size.height; // 当前tableView底部的坐标。
+    // 当前展示的第一个cell的位置
     JKRRowInfoModel *startRowInfo = [[JKRRowInfoModel alloc] init];
     startRowInfo.originY = startY;
+    // 当前展示的最后一个cell的位置
     JKRRowInfoModel *endRowInfo = [[JKRRowInfoModel alloc] init];
     endRowInfo.originY = endY;
     
@@ -38,19 +40,9 @@
     
     NSLog(@"startIndex:%zd - endIndex:%zd", startIndex, endIndex);
 
+    // 当前展示的cell的范围
     NSRange visibleCellRange = NSMakeRange(startIndex, endIndex-startIndex + 1);
-    startIndex = [self.rowInfoArray indexOfObject:startRowInfo inSortedRange:NSMakeRange(0, self.rowInfoArray.count - 1) options:NSBinarySearchingInsertionIndex usingComparator:^NSComparisonResult(id  _Nonnull obj1, id  _Nonnull obj2) {
-        JKRRowInfoModel *startRowInfo = obj1;
-        JKRRowInfoModel *endRowInfo = obj2;
-        if (startRowInfo.originY > endRowInfo.originY && startRowInfo.originY > endRowInfo.originY + endRowInfo.sizeHeight) {
-            return NSOrderedSame;
-        } else if (startRowInfo.originY < endRowInfo.originY) {
-            return NSOrderedDescending;
-        } else {
-            return NSOrderedAscending;
-        }
-    }];
-    
+
     for (NSInteger i = visibleCellRange.location; i < visibleCellRange.location + visibleCellRange.length; i++) {
         UITableViewCell *cell = self.visibleCellPool[@(i)];
         if (!cell) {
@@ -74,6 +66,8 @@
             [self.visibleCellPool removeObjectForKey:@(indexKey)];
         }
     }
+    
+    NSLog(@"%zd -- %zd -- %zd", self.visibleCellPool.count, self.reuseCellPool.count, self.rowInfoArray.count);
 }
 
 -(UITableViewCell *)dequeueReusableCellWithIdentifier:(NSString *)identifier {
@@ -87,6 +81,23 @@
 - (void)reloadData {
     [self countRowPosition];
     [self setNeedsLayout];
+}
+
+- (NSRange)visibleRowRangeWithStart:(CGFloat)startY end:(CGFloat)endY startIndex:(NSInteger)startIndex endIndex:(NSInteger)endIndex {
+    for (NSInteger i = 0; i < self.rowInfoArray.count; i++) {
+        JKRRowInfoModel *rowInfo = self.rowInfoArray[i];
+        if (startIndex == -1) {
+            if (startY >= rowInfo.originY && startY < rowInfo.originY + rowInfo.sizeHeight) {
+                startIndex = i;
+            }
+        } else {
+            if (endY >= rowInfo.originY && endY < rowInfo.originY + rowInfo.sizeHeight) {
+                endIndex = i;
+                break;
+            }
+        }
+    }
+    return NSMakeRange(startIndex, endIndex - startIndex + 1);
 }
 
 - (void)countRowPosition {
