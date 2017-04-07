@@ -26,17 +26,11 @@
     // 如果当前滚动的Y+tableView的高度大于tableView的contentSize的高度，证明滚动到了最底部，endY等于contentSize的高度
     // 如果当前滚动的Y+tableView的高度小于tableView的contentSize的高度，还么有滚动到最底部，endY等于startY的tableView的高度
     CGFloat endY = (startY + self.frame.size.height) > self.contentSize.height ? self.contentSize.height : startY + self.frame.size.height; // 当前tableView底部的坐标。
-    // 当前展示的第一个cell的位置
-    JKRRowInfoModel *startRowInfo = [[JKRRowInfoModel alloc] init];
-    startRowInfo.originY = startY;
-    // 当前展示的最后一个cell的位置
-    JKRRowInfoModel *endRowInfo = [[JKRRowInfoModel alloc] init];
-    endRowInfo.originY = endY;
     
     // 顶部cell的index
-    NSInteger startIndex = [self binarySearchIndexWithRowInfo:startRowInfo];
+    NSInteger startIndex = [self binarySearchIndexWithTopPosition:startY];
     // 底部cell的index
-    NSInteger endIndex = [self binarySearchIndexWithRowInfo:endRowInfo];
+    NSInteger endIndex = [self binarySearchIndexWithTopPosition:endY];
     
     NSLog(@"startIndex:%zd - endIndex:%zd", startIndex, endIndex);
 
@@ -115,7 +109,7 @@
     [self setContentSize:CGSizeMake(self.frame.size.width, addUpHigh)];
 }
 
-- (NSInteger)binarySearchIndexWithRowInfo:(JKRRowInfoModel *)rowInfo {
+- (NSInteger)binarySearchIndexWithTopPosition:(CGFloat)topPosition {
     NSInteger min = 0;
     NSInteger max = self.rowInfoArray.count - 1;
     NSInteger mid;
@@ -123,9 +117,9 @@
     while (min < max) {
         mid = min + (max - min) / 2;
         JKRRowInfoModel *midModel = self.rowInfoArray[mid];
-        if (rowInfo.originY >= midModel.originY && rowInfo.originY < midModel.originY + midModel.sizeHeight) {
+        if (topPosition >= midModel.originY && topPosition < midModel.originY + midModel.sizeHeight) {
             return mid;
-        } else if (rowInfo.originY < midModel.originY) {
+        } else if (topPosition < midModel.originY) {
             max = mid;
             if (max - mid == 1) {
                 return min;
